@@ -83,3 +83,7 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 
 map <F2> :NERDTreeToggle<CR>
+
+#Add syntatic lang 
+au BufNewFile,BufRead *.yaml set filetype=yaml.ansible
+au BufNewFile,BufRead *.yml set filetype=yaml.ansible
