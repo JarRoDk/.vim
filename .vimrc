@@ -1,5 +1,8 @@
-" powerline
+" Powerline for Ubuntu | pip install --user powerline-status
 set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" Powerline for Centos | pip install --user powerline-status
+set  rtp+=/usr/lib/python2.6/site-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
 
