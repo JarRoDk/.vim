@@ -67,9 +67,19 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" By default, Syntastic does not check for errors when a file is loaded into
+" Vim
 let g:syntastic_always_populate_loc_list = 1
+
 let g:syntastic_auto_loc_list = 1
+
+" By default, Syntastic does not check for errors when a file is loaded into Vim
 let g:syntastic_check_on_open = 1
+
+" By default, Syntastic checks for errors whenever you save the file.
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
 
 map <F2> :NERDTreeToggle<CR>
