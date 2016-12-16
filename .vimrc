@@ -109,6 +109,7 @@ nnoremap <C-n> :call NumberToggle()<cr>
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
+let NERDTreeShowHidden=1
 
 map <C-h> :call WinMove('h')<cr>
 map <C-j> :call WinMove('j')<cr>
