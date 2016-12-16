@@ -90,3 +90,17 @@ map <F2> :NERDTreeToggle<CR>
 " Add syntatic lang 
 au BufNewFile,BufRead *.yaml set filetype=yaml.ansible
 au BufNewFile,BufRead *.yml set filetype=yaml.ansible
+
+
+
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+
