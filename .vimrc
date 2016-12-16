@@ -4,7 +4,8 @@ set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 " Powerline for Centos | pip install --user powerline-status
 set  rtp+=/usr/lib/python2.6/site-packages/powerline/bindings/vim/
 set laststatus=2
-set t_Co=256
+let base16colorspace=256  " Access colors present in 256 colorspace"
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -109,3 +110,86 @@ autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
 
+map <C-h> :call WinMove('h')<cr>
+map <C-j> :call WinMove('j')<cr>
+map <C-k> :call WinMove('k')<cr>
+map <C-l> :call WinMove('l')<cr>
+
+" Window movement shortcuts
+" move to the window in the direction shown, or create a new window
+function! WinMove(key)
+    let t:curwin = winnr()
+    exec "wincmd ".a:key
+    if (t:curwin == winnr())
+        if (match(a:key,'[jk]'))
+            wincmd v
+        else
+            wincmd s
+        endif
+        exec "wincmd ".a:key
+    endif
+endfunction
+
+set nocompatible " not compatible with vi
+set autoread " detect when a file is changed
+
+" make backspace behave in a sane manner
+set backspace=indent,eol,start
+
+" set a map leader for more key combos
+let mapleader = ','
+
+" Tab control
+set noexpandtab " tabs ftw
+set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
+set tabstop=4 " the visible width of tabs
+set softtabstop=4 " edit as if the tabs are 4 characters wide
+set shiftwidth=4 " number of spaces to use for indent and unindent
+set shiftround " round indent to a multiple of 'shiftwidth'
+
+set clipboard=unnamed
+
+" faster redrawing
+set ttyfast
+
+" code folding settings
+set foldmethod=syntax " fold based on indent
+set foldnestmax=10 " deepest fold is 10 levels
+set nofoldenable " don't fold by default
+set foldlevel=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => User Interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Searching
+set ignorecase " case insensitive searching
+set smartcase " case-sensitive if expresson contains a capital letter
+set hlsearch
+set incsearch " set incremental search, like modern browsers
+set nolazyredraw " don't redraw while executing macros
+
+set magic " Set magic on, for regex
+
+set showmatch " show matching braces
+set mat=2 " how many tenths of a second to blink
+
+set encoding=utf8
+
+set autoindent " automatically set indent of new line
+set smartindent
+
+set laststatus=2 " show the satus line all the time
+
+let g:ctrlp_map='<leader>t'
+let g:ctrlp_dotfiles=1
+let g:ctrlp_working_path_mode = 'ra'
+
+" CtrlP ignore patterns
+let g:ctrlp_custom_ignore = {
+            \ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
+            \ 'file': '\.exe$\|\.so$'
+            \ }
+
+" search the nearest ancestor that contains .git, .hg, .svn
+let g:ctrlp_working_path_mode = 2
