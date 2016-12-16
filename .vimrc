@@ -92,7 +92,7 @@ au BufNewFile,BufRead *.yaml set filetype=yaml.ansible
 au BufNewFile,BufRead *.yml set filetype=yaml.ansible
 
 
-
+" when we use ctrl + n we will see numers
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
@@ -102,5 +102,10 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
+
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
 
 
