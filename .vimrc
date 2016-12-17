@@ -182,6 +182,11 @@ set smartindent
 
 set laststatus=2 " show the satus line all the time
 
+set wrap " turn on wrapping 
+set wrapmargin=8 " wrap line when coming within n characters from side
+set linebreak " set soft wrapping
+set showbreak="..."  "set soft elisis at breaking
+
 let g:ctrlp_map='<leader>t'
 let g:ctrlp_dotfiles=1
 let g:ctrlp_working_path_mode = 'ra'
