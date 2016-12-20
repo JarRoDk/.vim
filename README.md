@@ -35,7 +35,10 @@ pip install powerline-status
 
 https://github.com/powerline/fonts/tree/master/DejaVuSansMono
 
-DejaVu Sans Mono for Powerline.ttf ( download, click and install ) 
+download, click and install
+
+## Configure Fonts in windows putty like from screenshot
+![Settings Window putty](https://farm1.staticflickr.com/633/30962917843_c8ca94517e_o_d.png)
 
 # Change to 256color
 in .bashrc
