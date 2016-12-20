@@ -18,6 +18,9 @@ wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch
 
 rpm -ivh epel-release-6-8.noarch.rpm
 
+# Install tmux 
+yum install tmux
+
 # Install pip for powerline
 ## RHEL/CentOS 7 64-Bit ##
 yum install python-pip
