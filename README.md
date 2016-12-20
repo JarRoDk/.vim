@@ -48,4 +48,4 @@ wget -P /usr/share/fonts https://github.com/powerline/powerline/raw/develop/font
 git clone https://github.com/JarRoDk/.vim ~/.vim
 
 ## Run config ( make link, add line to start powerline ) 
-./vim/config.sh
+. ~/.vim/config.sh
