@@ -42,7 +42,7 @@ export TERM=”screen-256color”
 wget -P /usr/share/fonts https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 
 ## Install my .vim profile 
-git clone https://github.com/JarRoDk/.vim
+git clone https://github.com/JarRoDk/.vim ~/.vim
 
 ## Run config ( make link, add line to start powerline ) 
 ./vim/config.sh
