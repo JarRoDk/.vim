@@ -1,6 +1,7 @@
 # .vim
 My personal vim configuration with bundle/plugins
 
+# Install Epel
 ## RHEL/CentOS 7 64-Bit ##
 wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-8.noarch.rpm
 
@@ -17,7 +18,7 @@ wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch
 
 rpm -ivh epel-release-6-8.noarch.rpm
 
-## Install pip for powerline
+# Install pip for powerline
 ## RHEL/CentOS 7 64-Bit ##
 yum install python-pip
 
@@ -30,10 +31,11 @@ https://github.com/powerline/fonts/tree/master/DejaVuSansMono
 
 DejaVu Sans Mono for Powerline.ttf ( download, click and install ) 
 
+# Change to 256color
 in .bashrc
 export TERM=”screen-256color” 
 
-## Install on machine
+# Machine reconfigure
 wget -P /usr/share/fonts https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 
 ## Install my .vim profile 
