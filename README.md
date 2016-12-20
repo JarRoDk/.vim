@@ -22,6 +22,9 @@ rpm -ivh epel-release-6-8.noarch.rpm
 ## RHEL/CentOS 7 64-Bit ##
 yum install python-pip
 
+## Upgrade pip 
+pip install --upgrade pip
+
 ## Install Powerline
 pip install powerline-status
 
