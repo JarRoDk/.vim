@@ -1,15 +1,3 @@
-" Powerline for Ubuntu | pip install --user powerline-status
-set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
-
-" Powerline for Centos | pip install --user powerline-status
-set  rtp+=/usr/lib/python2.6/site-packages/powerline/bindings/vim/
-set laststatus=2
-let base16colorspace=256  " Access colors present in 256 colorspace"
-set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 execute pathogen#infect()
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -27,10 +15,6 @@ Plugin 'ctrlp.vim'
 "Plugin 'FindInNERDTree' 
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'nginx.vim'
-
-
-
-
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -50,6 +34,20 @@ Plugin 'user/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+
+" Powerline for Ubuntu | pip install --user powerline-status
+set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" Powerline for Centos | pip install --user powerline-status
+set  rtp+=/usr/lib/python2.6/site-packages/powerline/bindings/vim/
+set laststatus=2
+let base16colorspace=256  " Access colors present in 256 colorspace"
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -196,15 +194,15 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 2
 
 " Tab navigation like Firefox.
-nnoremap <C-S-Tab> :tabprevious<CR>
+nnoremap <S-Tab> :tabprevious<CR>
 nnoremap <C-Tab>   :tabnext<CR>
 nnoremap <C-t>     :tabnew<CR>
 inoremap <C-S-Tab> <Esc>:tabprevious<CR>i
 inoremap <C-Tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>     <Esc>:tabnew<CR>
+"inoremap <C-t>     <Esc>:tabnew<CR>
 
-nnoremap <C-Insert> :tabnew<CR>
-nnoremap <C-Delete> :tabclose<CR>
+"nnoremap <C-Insert> :tabnew<CR>
+"nnoremap <C-Delete> :tabclose<CR>
 
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabnext<CR>
@@ -219,12 +217,13 @@ nnoremap td  :tabclose<CR>
 "nnoremap tl :tabprev<CR>
 "nnoremap tn :tabnew<CR>
 
-:nnoremap <C-S-t> :tabnew<CR>
-:inoremap <C-S-t> <Esc>:tabnew<CR>
+":nnoremap <C-S-t> :tabnew<CR>
+":inoremap <C-S-t> <Esc>:tabnew<CR>
 :inoremap <C-S-w> <Esc>:tabclose<CR>
 
 autocmd VimEnter * tab all
-autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"'
+"autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"' #error line
+"( open two tabs at one tabcreate
 
 nnoremap H gT
 nnoremap L gt
