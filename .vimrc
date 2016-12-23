@@ -199,3 +199,43 @@ let g:ctrlp_custom_ignore = {
 
 " search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 2
+
+" Tab navigation like Firefox.
+nnoremap <C-S-Tab> :tabprevious<CR>
+nnoremap <C-Tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-Tab> <Esc>:tabprevious<CR>i
+inoremap <C-Tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
+
+nnoremap <C-Insert> :tabnew<CR>
+nnoremap <C-Delete> :tabclose<CR>
+
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
+" Alternatively use
+"nnoremap th :tabnext<CR>
+"nnoremap tl :tabprev<CR>
+"nnoremap tn :tabnew<CR>
+
+:nnoremap <C-S-t> :tabnew<CR>
+:inoremap <C-S-t> <Esc>:tabnew<CR>
+:inoremap <C-S-w> <Esc>:tabclose<CR>
+
+autocmd VimEnter * tab all
+autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"'
+
+nnoremap H gT
+nnoremap L gt
+
+set timeout timeoutlen=1000 ttimeoutlen=100
+set <F13>=[27;5;9~
+nnoremap <F13> gt
+set <F14>=[27;6;9~
+nnoremap <F14> gT
