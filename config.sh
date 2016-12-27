@@ -2,4 +2,4 @@
 
 ln -s ~/.vim/.tmux.conf ~/.tmux.conf
 
-echo ". ~/.vim/powerline-run.sh" >> ~/.bashrc
+echo ". ~/.vim/powerline-run.sh" >> ~/.bash_profile

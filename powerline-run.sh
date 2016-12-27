@@ -1,4 +1,6 @@
 #!/bin/bash 
+export TERM="xterm-256color"
+
 
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
