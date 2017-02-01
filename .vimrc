@@ -70,9 +70,12 @@ set background=dark
 set nocompatible 
 
 " enable find files also in subfolders 
+
 set path+=**
 
 " Display all matching files when we tab complete 
+" We can use ^x and then ^f to choice files in our repo by tab
+" for example searching all .conf file we can use :find *.conf<tab>
 set wildmenu
 
 " enable netrw - stable vim neerdtree old feature, trying to check old embeded
