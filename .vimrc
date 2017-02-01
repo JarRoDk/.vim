@@ -66,6 +66,13 @@ filetype plugin indent on    " required
 syntax enable
 set background=dark
 
+" don't pretend old good vi
+set nocompatible 
+
+" enable netrw - stable vim neerdtree old feature, trying to check old embeded
+" feature 
+filetype plugin on
+
 " recomended from Syntatic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
