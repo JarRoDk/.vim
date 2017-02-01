@@ -214,5 +214,8 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 2
 
 " TEMPLATES 
+" to run this you only enter in normal mode ,html and this html will be
+" inserted and jjwwf>a will be between <body></body>
+
 nnoremap ,html :-1read ~/.vim/templates/html.html<CR>jjwwf>a
 
