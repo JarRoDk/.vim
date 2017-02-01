@@ -198,6 +198,8 @@ set smartindent
 
 set laststatus=2 " show the satus line all the time
 
+set showcmd " show cmd in right down 
+
 let g:ctrlp_map='<leader>t'
 let g:ctrlp_dotfiles=1
 let g:ctrlp_working_path_mode = 'ra'
@@ -210,3 +212,7 @@ let g:ctrlp_custom_ignore = {
 
 " search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 2
+
+" TEMPLATES 
+nnoremap ,html :-1read ~/.vim/templates/html.html<CR>jjwwf>a
+
