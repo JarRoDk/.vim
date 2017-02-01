@@ -69,6 +69,12 @@ set background=dark
 " don't pretend old good vi
 set nocompatible 
 
+" enable find files also in subfolders 
+set path+=**
+
+" Display all matching files when we tab complete 
+set wildmenu
+
 " enable netrw - stable vim neerdtree old feature, trying to check old embeded
 " feature 
 filetype plugin on
