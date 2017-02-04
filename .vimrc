@@ -198,7 +198,6 @@ set laststatus=2 " show the satus line all the time
 
 
 set showcmd " show cmd in right down 
-=======
 set wrap " turn on wrapping 
 set wrapmargin=8 " wrap line when coming within n characters from side
 set linebreak " set soft wrapping
@@ -225,7 +224,6 @@ let g:ctrlp_working_path_mode = 2
 
 nnoremap ,html :-1read ~/.vim/templates/html.html<CR>jjwwf>a
 
-=======
 " Tab navigation like Firefox.
 nnoremap <S-Tab> :tabprevious<CR>
 nnoremap <C-Tab>   :tabnext<CR>
