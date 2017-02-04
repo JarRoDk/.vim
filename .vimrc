@@ -64,6 +64,22 @@ filetype plugin indent on    " required
 syntax enable
 set background=dark
 
+" don't pretend old good vi
+set nocompatible 
+
+" enable find files also in subfolders 
+
+set path+=**
+
+" Display all matching files when we tab complete 
+" We can use ^x and then ^f to choice files in our repo by tab
+" for example searching all .conf file we can use :find *.conf<tab>
+set wildmenu
+
+" enable netrw - stable vim neerdtree old feature, trying to check old embeded
+" feature 
+filetype plugin on
+
 " recomended from Syntatic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -180,10 +196,14 @@ set smartindent
 
 set laststatus=2 " show the satus line all the time
 
+
+set showcmd " show cmd in right down 
+=======
 set wrap " turn on wrapping 
 set wrapmargin=8 " wrap line when coming within n characters from side
 set linebreak " set soft wrapping
 set showbreak="..."  "set soft elisis at breaking
+
 
 let g:ctrlp_map='<leader>t'
 let g:ctrlp_dotfiles=1
@@ -198,6 +218,14 @@ let g:ctrlp_custom_ignore = {
 " search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 2
 
+
+" TEMPLATES 
+" to run this you only enter in normal mode ,html and this html will be
+" inserted and jjwwf>a will be between <body></body>
+
+nnoremap ,html :-1read ~/.vim/templates/html.html<CR>jjwwf>a
+
+=======
 " Tab navigation like Firefox.
 nnoremap <S-Tab> :tabprevious<CR>
 nnoremap <C-Tab>   :tabnext<CR>
