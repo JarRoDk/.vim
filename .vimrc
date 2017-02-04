@@ -264,3 +264,7 @@ set <F13>=[27;5;9~
 nnoremap <F13> gt
 set <F14>=[27;6;9~
 nnoremap <F14> gT
+
+:set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
+:set list
+
