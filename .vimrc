@@ -194,3 +194,5 @@ let g:ctrlp_custom_ignore = {
 
 " search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 2
+
+set showcmd
