@@ -217,7 +217,6 @@ let g:ctrlp_custom_ignore = {
 " search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 2
 
-
 " TEMPLATES 
 " to run this you only enter in normal mode ,html and this html will be
 " inserted and jjwwf>a will be between <body></body>
@@ -265,6 +264,7 @@ nnoremap <F13> gt
 set <F14>=[27;6;9~
 nnoremap <F14> gT
 
-:set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
-:set list
+set showcmd
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
+set list
 
