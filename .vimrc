@@ -1,3 +1,20 @@
+
+"work without compatible in this way we will use all new way of vim 
+set nocompatible
+
+" Powerline for Ubuntu | pip install --user powerline-status
+set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" Powerline for Centos | pip install --user powerline-status
+set  rtp+=/usr/lib/python2.6/site-packages/powerline/bindings/vim/
+set laststatus=2
+let base16colorspace=256  " Access colors present in 256 colorspace"
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+
 " set the runtime path to include Vundle and initialize
 execute pathogen#infect()
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -21,16 +38,16 @@ Plugin 'nginx.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
+" Plugin 'L9'
 " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+" Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
+" Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
-Plugin 'user/L9', {'name': 'newL9'}
+" Plugin 'user/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -107,16 +124,16 @@ au BufNewFile,BufRead *.yaml set filetype=yaml.ansible
 au BufNewFile,BufRead *.yml set filetype=yaml.ansible
 
 
-" when we use ctrl + n we will see numers
-function! NumberToggle()
+" when we will enter in insert mode number will show
+function NumberToggle()
   if(&relativenumber == 1)
     set number
   else
     set relativenumber
   endif
 endfunc
-
-nnoremap <C-n> :call NumberToggle()<cr>
+"this mapping is not neccesary ctrl+n is free in mapping during Ex-mode
+"nnoremap <C-n> :call NumberToggle()<cr>
 
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
@@ -157,9 +174,9 @@ let mapleader = ','
 " Tab control
 set noexpandtab " tabs ftw
 set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
-set tabstop=4 " the visible width of tabs
-set softtabstop=4 " edit as if the tabs are 4 characters wide
-set shiftwidth=4 " number of spaces to use for indent and unindent
+set tabstop=2 " the visible width of tabs
+set softtabstop=2 " edit as if the tabs are 4 characters wide
+set shiftwidth=2 " number of spaces to use for indent and unindent
 set shiftround " round indent to a multiple of 'shiftwidth'
 
 set clipboard=unnamed
@@ -268,3 +285,8 @@ set showcmd
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set list
 
+
+"add list choice scrooling by tab
+set wildmenu
+set wildmode=longest:full,full
+"set wildmode=list:longest,full
