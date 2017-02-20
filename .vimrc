@@ -1,3 +1,7 @@
+
+"work without compatible in this way we will use all new way of vim 
+set nocompatible
+
 " Powerline for Ubuntu | pip install --user powerline-status
 set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
@@ -9,6 +13,7 @@ set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
 
 " set the runtime path to include Vundle and initialize
 execute pathogen#infect()
@@ -28,28 +33,38 @@ Plugin 'ctrlp.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'nginx.vim'
 
-
-
-
-
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
+" Plugin 'L9'
 " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+" Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
+" Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
-Plugin 'user/L9', {'name': 'newL9'}
+" Plugin 'user/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+
+" Powerline for Ubuntu | pip install --user powerline-status
+set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" Powerline for Centos | pip install --user powerline-status
+set  rtp+=/usr/lib/python2.6/site-packages/powerline/bindings/vim/
+set laststatus=2
+let base16colorspace=256  " Access colors present in 256 colorspace"
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -65,6 +80,22 @@ filetype plugin indent on    " required
 "
 syntax enable
 set background=dark
+
+" don't pretend old good vi
+set nocompatible 
+
+" enable find files also in subfolders 
+
+set path+=**
+
+" Display all matching files when we tab complete 
+" We can use ^x and then ^f to choice files in our repo by tab
+" for example searching all .conf file we can use :find *.conf<tab>
+set wildmenu
+
+" enable netrw - stable vim neerdtree old feature, trying to check old embeded
+" feature 
+filetype plugin on
 
 " recomended from Syntatic
 set statusline+=%#warningmsg#
@@ -93,16 +124,16 @@ au BufNewFile,BufRead *.yaml set filetype=yaml.ansible
 au BufNewFile,BufRead *.yml set filetype=yaml.ansible
 
 
-" when we use ctrl + n we will see numers
-function! NumberToggle()
+" when we will enter in insert mode number will show
+function NumberToggle()
   if(&relativenumber == 1)
     set number
   else
     set relativenumber
   endif
 endfunc
-
-nnoremap <C-n> :call NumberToggle()<cr>
+"this mapping is not neccesary ctrl+n is free in mapping during Ex-mode
+"nnoremap <C-n> :call NumberToggle()<cr>
 
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
@@ -143,9 +174,9 @@ let mapleader = ','
 " Tab control
 set noexpandtab " tabs ftw
 set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
-set tabstop=4 " the visible width of tabs
-set softtabstop=4 " edit as if the tabs are 4 characters wide
-set shiftwidth=4 " number of spaces to use for indent and unindent
+set tabstop=2 " the visible width of tabs
+set softtabstop=2 " edit as if the tabs are 4 characters wide
+set shiftwidth=2 " number of spaces to use for indent and unindent
 set shiftround " round indent to a multiple of 'shiftwidth'
 
 set clipboard=unnamed
@@ -182,6 +213,14 @@ set smartindent
 
 set laststatus=2 " show the satus line all the time
 
+
+set showcmd " show cmd in right down 
+set wrap " turn on wrapping 
+set wrapmargin=8 " wrap line when coming within n characters from side
+set linebreak " set soft wrapping
+set showbreak="..."  "set soft elisis at breaking
+
+
 let g:ctrlp_map='<leader>t'
 let g:ctrlp_dotfiles=1
 let g:ctrlp_working_path_mode = 'ra'
@@ -195,4 +234,59 @@ let g:ctrlp_custom_ignore = {
 " search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 2
 
+" TEMPLATES 
+" to run this you only enter in normal mode ,html and this html will be
+" inserted and jjwwf>a will be between <body></body>
+
+nnoremap ,html :-1read ~/.vim/templates/html.html<CR>jjwwf>a
+
+" Tab navigation like Firefox.
+nnoremap <S-Tab> :tabprevious<CR>
+nnoremap <C-Tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-Tab> <Esc>:tabprevious<CR>i
+inoremap <C-Tab>   <Esc>:tabnext<CR>i
+"inoremap <C-t>     <Esc>:tabnew<CR>
+
+"nnoremap <C-Insert> :tabnew<CR>
+"nnoremap <C-Delete> :tabclose<CR>
+
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
+" Alternatively use
+"nnoremap th :tabnext<CR>
+"nnoremap tl :tabprev<CR>
+"nnoremap tn :tabnew<CR>
+
+":nnoremap <C-S-t> :tabnew<CR>
+":inoremap <C-S-t> <Esc>:tabnew<CR>
+:inoremap <C-S-w> <Esc>:tabclose<CR>
+
+autocmd VimEnter * tab all
+"autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"' #error line
+"( open two tabs at one tabcreate
+
+nnoremap H gT
+nnoremap L gt
+
+set timeout timeoutlen=1000 ttimeoutlen=100
+set <F13>=[27;5;9~
+nnoremap <F13> gt
+set <F14>=[27;6;9~
+nnoremap <F14> gT
+
 set showcmd
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
+set list
+
+
+"add list choice scrooling by tab
+set wildmenu
+set wildmode=longest:full,full
+"set wildmode=list:longest,full
