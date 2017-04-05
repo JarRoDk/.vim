@@ -325,6 +325,7 @@ set wildmode=longest:full,full
 "set wildmode=list:longest,full
 
 " -------------------   ctags/tagbar SECTION ----------------------------------
+" Based on https://z0mbix.io/2016/09/04/ctag-support-for-terraform/
 " CtrlP
 nnoremap <silent> <leader>o :CtrlP<CR>  
 nnoremap <silent> <leader>t :CtrlPTag<cr>  
