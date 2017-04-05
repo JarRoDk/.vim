@@ -220,19 +220,36 @@ set wrapmargin=8 " wrap line when coming within n characters from side
 set linebreak " set soft wrapping
 set showbreak="..."  "set soft elisis at breaking
 
-
-let g:ctrlp_map='<leader>t'
+"show in search hiden files (.*)
 let g:ctrlp_dotfiles=1
+
+"*'g:ctrlp_working_path_mode'*
+"When starting up, CtrlP sets its local working directory according to this
+"variable: >
+"  let g:ctrlp_working_path_mode = 'ra'
+"<
+"  c - the directory of the current file.
+"  a - like "c", but only applies when the current working directory outside of
+"      CtrlP isn't a direct ancestor of the directory of the current file.
+"  r - the nearest ancestor that contains one of these directories or files:
+"      .git .hg .svn .bzr _darcs
+"  w - begin finding a root from the current working directory outside of CtrlP
+"      instead of from the directory of the current file (default). Only applies
+"      when "r" is also present.
+"  0 or <empty> - disable this feature.
+"
+"Note #1: if "a" or "c" is included with "r", use the behavior of "a" or "c" (as
+"a fallback) when a root can't be found.
+"
+"Note #2: you can use a |b:var| to set this option on a per buffer basis.
 let g:ctrlp_working_path_mode = 'ra'
 
-" CtrlP ignore patterns
-let g:ctrlp_custom_ignore = {
-            \ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
-            \ 'file': '\.exe$\|\.so$'
-            \ }
+" CtrlP ignore patterns - ignor i don't know if i will use this custom ignore
+"let g:ctrlp_custom_ignore = {
+"            \ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
+"            \ 'file': '\.exe$\|\.so$'
+"            \ }
 
-" search the nearest ancestor that contains .git, .hg, .svn
-let g:ctrlp_working_path_mode = 2
 
 " TEMPLATES 
 " to run this you only enter in normal mode ,html and this html will be
