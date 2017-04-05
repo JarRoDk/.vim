@@ -220,6 +220,10 @@ set wrapmargin=8 " wrap line when coming within n characters from side
 set linebreak " set soft wrapping
 set showbreak="..."  "set soft elisis at breaking
 
+"if we don't map ctrlp to ctrl+p it will be auto assigne to ctrl+p
+"But for more clear situation i will set it
+let g:ctrlp_map='<c-p>'
+
 "show in search hiden files (.*)
 let g:ctrlp_dotfiles=1
 
