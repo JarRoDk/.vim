@@ -49,6 +49,7 @@ Plugin 'tpope/vim-fugitive'
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 
+Plugin 'Tagbar'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -168,8 +169,19 @@ set autoread " detect when a file is changed
 " make backspace behave in a sane manner
 set backspace=indent,eol,start
 
-" set a map leader for more key combos
+
+"use description below
 let mapleader = ','
+
+"set a map leader for more key combos for <Leader>maps for exampel 
+":map <Leader>A oanother line <esc> 
+":map <leader>A oanother line <esc> is also working with low litter you need
+"to remember leader/Leader this same but A must be Uppercase, offcourse
+"becasuse we set it
+"mean:
+",A 
+"first liter is o like open insert mode in next line and insert another line
+"and exit
 
 " Tab control
 set noexpandtab " tabs ftw
@@ -311,3 +323,70 @@ set list
 set wildmenu
 set wildmode=longest:full,full
 "set wildmode=list:longest,full
+
+" -------------------   ctags/tagbar SECTION ----------------------------------
+" Based on https://z0mbix.io/2016/09/04/ctag-support-for-terraform/
+" CtrlP
+nnoremap <silent> <leader>o :CtrlP<CR>  
+nnoremap <silent> <leader>t :CtrlPTag<cr>  
+nnoremap <silent> <leader>b :CtrlPBuffer<cr>  
+nnoremap <silent> <leader>l :CtrlPLine<cr>  
+nnoremap <silent> <leader>b :TagbarToggle<CR>  
+nnoremap <silent> ; :CtrlPBuffer<CR>
+
+nnoremap <leader>f :ta<space>
+
+"Auto open the TagBar when file is supported
+"Firt bug when i use FileType not VimEnter like it is advices by tagbar it
+"fail color coding and fail show tabar,
+"https://github.com/majutsushi/tagbar/issues/60#issuecomment-4192010
+"autocmd FileType * nested :call tagbar#autoopen(0) 
+autocmd VimEnter * nested :call tagbar#autoopen(1)
+
+let g:tagbar_compact = 1
+
+let g:tagbar_type_ansible = {  
+    \ 'ctagstype' : 'ansible',
+    \ 'kinds' : [
+    \ 't:tasks',
+    \ 'h:hosts'
+    \ ],
+    \ 'sort' : 0
+    \ }
+
+let g:tagbar_type_terraform = {  
+    \ 'ctagstype' : 'terraform',
+    \ 'kinds' : [
+    \ 'r:resources',
+    \ 'm:modules',
+    \ 'o:outputs',
+    \ 'v:variables',
+    \ 'f:tfvars'
+    \ ],
+    \ 'sort' : 0
+    \ }
+
+let g:tagbar_type_make = {  
+    \ 'kinds':[
+    \ 'm:macros',
+    \ 't:targets'
+    \ ]
+    \}
+
+let g:tagbar_type_sh = {  
+    \ 'kinds':[
+    \ 'f:functions',
+    \ 'c:constants'
+    \ ]
+    \}
+
+let g:tagbar_type_markdown = {  
+    \ 'ctagstype' : 'markdown',
+    \ 'kinds' : [
+    \ 'h:Heading_L1',
+    \ 'i:Heading_L2',
+    \ 'k:Heading_L3'
+    \ ]
+    \ }
+" ctags/tagbar SECTION ----------------------------------
+"
