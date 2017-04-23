@@ -2,6 +2,14 @@
 "work without compatible in this way we will use all new way of vim 
 set nocompatible
 
+"need this for Xuyuanp/nerdtree-git-plugin when i use m in nerdtree and g i
+"had this:
+"Error detected while processing function
+"nerdtree#ui_glue#invokeKeyMap..75..74..<SNR>38_showMenu..49..66..49..66..NERDTreeFugitiveStatus:
+"
+set shell=sh
+
+
 " Powerline for Ubuntu | pip install --user powerline-status
 set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
@@ -31,8 +39,16 @@ Plugin 'ctrlp.vim'
 "Plugin 'nerdtree-ack'  
 "Plugin 'FindInNERDTree' 
 Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdtree.git'
+
+" nerdtree-fugitive need to working on this
+Plugin 'scrooloose/nerdtree' 
+
+Plugin 'low-ghost/nerdtree-fugitive'
+
+"path to nerdtree below adding icons 
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'nginx.vim'
+
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -342,7 +358,7 @@ nnoremap <leader>f :ta<space>
 "fail color coding and fail show tabar,
 "https://github.com/majutsushi/tagbar/issues/60#issuecomment-4192010
 "autocmd FileType * nested :call tagbar#autoopen(0) 
-autocmd VimEnter * nested :call tagbar#autoopen(1)
+"autocmd VimEnter * nested :call tagbar#autoopen(1)
 
 let g:tagbar_compact = 1
 
@@ -391,3 +407,26 @@ let g:tagbar_type_markdown = {
     \ }
 " ctags/tagbar SECTION ----------------------------------
 "
+"NeerdTree
+"
+let g:vim_markdown_folding_disabled = 1 " ?
+let g:NERDTreeDirArrows = 0  " ?
+let g:NERDTreeShowGitStatus = 1 " ?
+let g:NERDTreeUpdateOnWrite = 1 " ?
+
+" describe this 
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+		\ }
+"Problem with Indicators ( icons in neerdtree 
+"In Centos 6 git there is no git -c command so we need correct this in repo:
+"bundle/nerdtree-git-plugin/nerdtree_plugin/git_status.vim
+"let l:gitcmd = 'git -c color.status=false status -s'
