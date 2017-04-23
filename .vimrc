@@ -2,6 +2,13 @@
 "work without compatible in this way we will use all new way of vim 
 set nocompatible
 
+"need this for Xuyuanp/nerdtree-git-plugin when i use m in nerdtree and g i
+"had this:
+"Error detected while processing function
+"nerdtree#ui_glue#invokeKeyMap..75..74..<SNR>38_showMenu..49..66..49..66..NERDTreeFugitiveStatus:
+"
+"set shell=sh
+
 " Powerline for Ubuntu | pip install --user powerline-status
 set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
@@ -31,8 +38,15 @@ Plugin 'ctrlp.vim'
 "Plugin 'nerdtree-ack'  
 "Plugin 'FindInNERDTree' 
 Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdtree.git'
+
+" nerdtree-fugitive need to working on this
+Plugin 'scrooloose/nerdtree.git' 
+Plugin 'low-ghost/nerdtree-fugitive'
+
+"path to nerdtree below adding icons 
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'nginx.vim'
+
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -391,3 +405,18 @@ let g:tagbar_type_markdown = {
     \ }
 " ctags/tagbar SECTION ----------------------------------
 "
+"NeerdTree
+"
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+let g:NERDTreeShowIgnoredStatus = 1
