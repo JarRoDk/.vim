@@ -59,7 +59,7 @@ now you will have different color template like below
 
 ![MyPuttyColour](https://c1.staticflickr.com/3/2810/33382742204_3e7197c6fa_o.png)
 
-# Machine reconfigure
+# Fonts also should be installed on our Linux Machine 
 wget -P /usr/share/fonts https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 
 ## Install my .vim profile 
