@@ -71,17 +71,13 @@ solarized team have more influencer
 
 ![SolarizedGif](https://c1.staticflickr.com/5/4184/33417739833_036ba3e44e_o.gif)
 
-How you can check it 
+##How you can check it 
 
 git clone https://github.com/seebi/dircolors-solarized.git
 
-cd dircolors-solarized
+cd dircolors-solarized; tar xvfj test-directory.tar.bz2
 
-tar xvfj test-directory.tar.bz2
-
-cd test-directory
-
-tar xvfj test-directory.tar.bz2
+cd test-directory; tar xvfj test-directory.tar.bz2
 
 ls -latr
 
