@@ -78,7 +78,8 @@ function! g:NERDTreeGitStatusRefresh()
     let b:NOT_A_GIT_REPOSITORY        = 1
 
     let l:root = b:NERDTree.root.path.str()
-    let l:gitcmd = 'git -c color.status=false status -s'
+    "let l:gitcmd = 'git -c color.status=false status -s'
+    let l:gitcmd = 'git status -s'
     if g:NERDTreeShowIgnoredStatus
         let l:gitcmd = l:gitcmd . ' --ignored'
     endif
