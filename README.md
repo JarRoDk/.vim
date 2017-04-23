@@ -62,7 +62,7 @@ now you will have different color template like below
 
 ![MyPuttyColour](https://c1.staticflickr.com/3/2810/33382742204_3e7197c6fa_o.png)
 
-# Why i think solarized_dark is use full 
+# Why i think solarized is use full 
 
 ![SolarizedGif](https://c1.staticflickr.com/5/4184/33417739833_036ba3e44e_o.gif)
 
