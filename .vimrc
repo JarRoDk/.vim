@@ -30,6 +30,7 @@ Plugin 'ctrlp.vim'
 "Plugin 'nerdtree'
 "Plugin 'nerdtree-ack'  
 "Plugin 'FindInNERDTree' 
+Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'nginx.vim'
 
