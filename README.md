@@ -73,13 +73,17 @@ solarized team have more influencer
 
 How you can check it 
 
-![dircolors-solarized](https://github.com/seebi/dircolors-solarized.git)
-
 git clone https://github.com/seebi/dircolors-solarized.git
 
 cd dircolors-solarized
 
 tar xvfj test-directory.tar.bz2
+
+cd test-directory
+
+tar xvfj test-directory.tar.bz2
+
+ls -latr
 
 ## Install my .vim profile 
 git clone https://github.com/JarRoDk/.vim ~/.vim
