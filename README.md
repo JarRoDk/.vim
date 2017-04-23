@@ -48,7 +48,7 @@ export TERM=”screen-256color”
 Go to https://github.com/altercation/solarized/tree/master/putty-colors-solarized
 download solarized_dark.reg on your desctop 
 run this to modify your windows register 
-![PuttySessionSettings](https://c1.staticflickr.com/3/2817/34183840316_f93bd572b3_b.jpg)
+![PuttySessionSettings](https://c1.staticflickr.com/3/2817/34183840316_f93bd572b3_n.jpg)
 
 
 # Machine reconfigure
