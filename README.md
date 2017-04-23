@@ -44,8 +44,23 @@ download, click and install
 in .bashrc
 export TERM=”screen-256color” 
 
-# Machine reconfigure
+# Fonts also should be installed on our Linux Machine 
 wget -P /usr/share/fonts https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+
+# Add color template for Putty 
+Go to https://github.com/altercation/solarized/tree/master/putty-colors-solarized
+
+download ![solarized_dark.reg](https://raw.githubusercontent.com/altercation/solarized/master/putty-colors-solarized/solarized_dark.reg) on your desktop 
+
+run this to modify your windows register. Now you should see another session. Like below:
+
+![PuttySessionSettings](https://c1.staticflickr.com/3/2817/34183840316_f93bd572b3_n.jpg)
+
+load it and insert your connection config to your server and save on different name
+
+now you will have different color template like below
+
+![MyPuttyColour](https://c1.staticflickr.com/3/2810/33382742204_3e7197c6fa_o.png)
 
 ## Install my .vim profile 
 git clone https://github.com/JarRoDk/.vim ~/.vim
