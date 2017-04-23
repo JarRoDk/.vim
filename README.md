@@ -57,7 +57,7 @@ load it and insert your connection config to your server and save on different n
 
 now you will have different color template like below
 
-![MyPuttyColour](https://c1.staticflickr.com/3/2810/33382742204_af1e768994_z.jpg)
+![MyPuttyColour](https://c1.staticflickr.com/3/2810/33382742204_3e7197c6fa_o.png)
 
 # Machine reconfigure
 wget -P /usr/share/fonts https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
