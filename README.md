@@ -44,6 +44,13 @@ download, click and install
 in .bashrc
 export TERM=”screen-256color” 
 
+# Add color template for Putty 
+Go to https://github.com/altercation/solarized/tree/master/putty-colors-solarized
+download solarized_dark.reg on your desctop 
+run this to modify your windows register 
+![PuttySessionSettings](https://c1.staticflickr.com/3/2817/34183840316_f93bd572b3_b.jpg)
+
+
 # Machine reconfigure
 wget -P /usr/share/fonts https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 
