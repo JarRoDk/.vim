@@ -47,7 +47,13 @@ Plugin 'low-ghost/nerdtree-fugitive'
 
 "path to nerdtree below adding icons 
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+"syntastic is only for code checking we also need lint-ansible 
+"$ pip2 install ansible-lint
+Plugin 'vim-syntastic/syntastic'
 Plugin 'nginx.vim'
+
+Plugin 'pearofducks/ansible-vim'
 
 
 " The following are examples of different formats supported.
