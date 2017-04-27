@@ -38,6 +38,7 @@ Plugin 'ctrlp.vim'
 "Plugin 'nerdtree'
 "Plugin 'nerdtree-ack'  
 "Plugin 'FindInNERDTree' 
+"Plugin 'syntastic' "is only for code checking not for 
 Plugin 'airblade/vim-gitgutter'
 
 " nerdtree-fugitive need to working on this
@@ -47,7 +48,11 @@ Plugin 'low-ghost/nerdtree-fugitive'
 
 "path to nerdtree below adding icons 
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+Plugin 'vim-syntastic/syntastic'
 Plugin 'nginx.vim'
+
+Plugin 'pearofducks/ansible-vim'
 
 
 " The following are examples of different formats supported.
