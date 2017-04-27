@@ -62,6 +62,23 @@ now you will have different color template like below
 
 ![MyPuttyColour](https://c1.staticflickr.com/3/2810/33382742204_3e7197c6fa_o.png)
 
+# Why i think solarized is usefull 
+Many times i blame Linux bash/putty/windows default colors is bad i don't see clearly most of things, 
+
+i know i can change it by my self in putty config but i am to lazy. Seams many people thinks in this same way 
+
+solarized team have more influencer
+
+git clone https://github.com/seebi/dircolors-solarized.git
+
+cd dircolors-solarized; tar xvfj test-directory.tar.bz2
+
+cd test-directory; tar xvfj test-directory.tar.bz2
+
+ls -latr
+
+![SolarizedGif](https://c1.staticflickr.com/5/4184/33417739833_036ba3e44e_o.gif)
+
 ## Install my .vim profile 
 git clone https://github.com/JarRoDk/.vim ~/.vim
 
