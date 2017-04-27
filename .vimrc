@@ -38,7 +38,7 @@ Plugin 'ctrlp.vim'
 "Plugin 'nerdtree'
 "Plugin 'nerdtree-ack'  
 "Plugin 'FindInNERDTree' 
-"Plugin 'syntastic' "is only for code checking not for 
+Plugin 'syntastic' "is only for code checking not for 
 Plugin 'airblade/vim-gitgutter'
 
 " nerdtree-fugitive need to working on this
