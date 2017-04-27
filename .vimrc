@@ -38,7 +38,6 @@ Plugin 'ctrlp.vim'
 "Plugin 'nerdtree'
 "Plugin 'nerdtree-ack'  
 "Plugin 'FindInNERDTree' 
-Plugin 'syntastic' "is only for code checking not for 
 Plugin 'airblade/vim-gitgutter'
 
 " nerdtree-fugitive need to working on this
@@ -49,6 +48,8 @@ Plugin 'low-ghost/nerdtree-fugitive'
 "path to nerdtree below adding icons 
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
+"syntastic is only for code checking we also need lint-ansible 
+"$ pip2 install ansible-lint
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nginx.vim'
 
