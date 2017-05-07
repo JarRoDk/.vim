@@ -73,6 +73,44 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'user/L9', {'name': 'newL9'}
 
 Plugin 'Tagbar'
+
+
+"Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more.
+"The plugin provides mappings to easily delete, change and add such surroundings in pairs.
+"HELP:
+"We can change 'asdasd' to "asdasd" by - cs'" ( change surrounding by ' to " ), delete s ' 
+"world jarek in line below, can be in brackets by - ysiw] 
+"test jarek
+"test [jarek]
+"cs[{
+"test { jarek }
+"with space
+"and without we need use oposite site of } ( not { )
+"cs[}
+"test { jarek } 
+"
+"yss"
+""test jarek" 
+"If we insert ysiw<my_tags> on jarek
+"test <my_tags>jarek</my_tags>
+"
+"if we want replace my_tags to h2
+"cst<h2>
+"test <h2>jarek</h2> 
+Plugin 'surround.vim'
+
+"if we want comment something we can use 
+"gc on line that we want comment out
+"gcap - to comment while paragraph 
+"and l to go right
+
+" asdasd 
+"   asdasd as
+" 	asd asdasd
+" 	asdasdasd
+
+Plugin 'commentary.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -328,6 +366,8 @@ autocmd VimEnter * tab all
 "autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"' #error line
 "( open two tabs at one tabcreate
 
+"normal without this mapping gT gt is working quite good
+"no plugin needed orginal vim is working ( mv .vimrc to .vimrc-vanila )
 nnoremap H gT
 nnoremap L gt
 
