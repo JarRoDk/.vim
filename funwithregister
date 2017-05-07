@@ -1,0 +1,57 @@
+registerA
+registerB
+
+go to registerA type in esc mode "a yiw and after it you will see in :reg
+:reg
+...
+"a   agisterA
+...
+
+now registerB
+:reg
+...
+"a   agisterA 
+"b   registerB
+
+to insert this you can type in esc mode "a and then p to paste after then "b to paste 
+registerb
+
+if you choice capitol name of register A or B it will append 
+
+remember when you use yw not yiw it will be till end world so for example registerA can 
+be isterA for yw if you will be after g char
+
+in insert mode we can use ctrl+r and register name 
+
+i
+ctrl+r a
+p
+registerB
+
+in ex mode this same we can use ctrl+r
+
+BRILIENT 2
+it this way we can use macros we can also see this macros in :reg 
+
+for example gg is for go to top of file we can register it in a register
+write 
+gg
+go to this gg line 
+"a yiw 
+
+:reg show 
+...
+"a   gg
+...
+
+now when you type @a ( so run macro a ) you will be on the top
+and you can add other thinks to makro by adding capitol A 
+for exampl
+now we have 
+"a   gg
+
+add macro with A
+and search BRILLIENT
+
+"a   gg/BRIE^HLIENT^Mlllllllllla2^[^[
+now we have added another thinks
