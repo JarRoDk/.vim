@@ -5,7 +5,8 @@ set nocompatible
 "need this for Xuyuanp/nerdtree-git-plugin when i use m in nerdtree and g i
 "had this:
 "Error detected while processing function
-"nerdtree#ui_glue#invokeKeyMap..75..74..<SNR>38_showMenu..49..66..49..66..NERDTreeFugitiveStatus:
+"nerdtree#ui_glue#invokeKeyMap..75..74..<SNR>38_showMenu..49..66..49..66..NERDTr
+"eeFugitiveStatus:
 "
 set shell=sh
 
@@ -71,6 +72,9 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
+
+"Add plugin for shortkeys good for fugitive
+Plugin 'unimpaired.vim'
 
 Plugin 'Tagbar'
 
@@ -371,6 +375,12 @@ autocmd VimEnter * tab all
 nnoremap H gT
 nnoremap L gt
 
+"Enforceing Purity - get use to hjkl - Minimal Remaping
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+nnoremap <Right> <nop>
+nnoremap <Left> <nop>
+
 set timeout timeoutlen=1000 ttimeoutlen=100
 set <F13>=[27;5;9~
 nnoremap <F13> gt
@@ -476,3 +486,8 @@ let g:NERDTreeIndicatorMapCustom = {
 "In Centos 6 git there is no git -c command so we need correct this in repo:
 "bundle/nerdtree-git-plugin/nerdtree_plugin/git_status.vim
 "let l:gitcmd = 'git -c color.status=false status -s'
+
+"Text limiting 
+set textwidth=80
+set colorcolumn=+1
+

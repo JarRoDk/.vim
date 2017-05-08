@@ -1,0 +1,12 @@
+:Template	template.txt	/*:Template*
+:TemplateHere	template.txt	/*:TemplateHere*
+template-commands	template.txt	/*template-commands*
+template-configuration	template.txt	/*template-configuration*
+template-contents	template.txt	/*template-contents*
+template-introduction	template.txt	/*template-introduction*
+template-search-order	template.txt	/*template-search-order*
+template-troubleshooting	template.txt	/*template-troubleshooting*
+template-usage	template.txt	/*template-usage*
+template-user-variables	template.txt	/*template-user-variables*
+template-variables	template.txt	/*template-variables*
+template.txt	template.txt	/*template.txt*
