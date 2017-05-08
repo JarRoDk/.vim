@@ -73,6 +73,9 @@ Plugin 'tpope/vim-fugitive'
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 
+"Add plugin for shortkeys good for fugitive
+Plugin 'unimpaired.vim'
+
 Plugin 'Tagbar'
 
 
