@@ -295,9 +295,6 @@ set mat=2 " how many tenths of a second to blink
 
 set encoding=utf8
 
-set noautoindent
-set nosmartindent
-set nocindent
 set autoindent " automatically set indent of new line
 set smartindent
 
