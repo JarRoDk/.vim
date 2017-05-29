@@ -37,8 +37,18 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'jshint.vim'
 Plugin 'ctrlp.vim'
 "Plugin 'nerdtree'
-"Plugin 'nerdtree-ack'  
+"Plugin 'nerdtree-ack'
+Plugin 'tmux-plugins/vim-tmux' "proper syntax highlighting tmux.conf
+"K jumps to exact place in man tmux, :make invokes tmux source .tmux.conf and
+"place all errorrs if any in quicklist
+"g! executest lines as tmux commands. Works on vusal selection or as a motion.
+"g!! executest just the current line
+
+"Plugin 'vim-ansible-yaml'
+"let g:ansible_options = {'ignore_blank_lines': 0}
+
 "Plugin 'FindInNERDTree' 
+
 Plugin 'airblade/vim-gitgutter'
 
 " nerdtree-fugitive need to working on this
@@ -285,8 +295,12 @@ set mat=2 " how many tenths of a second to blink
 
 set encoding=utf8
 
+set noautoindent
+set nosmartindent
+set nocindent
 set autoindent " automatically set indent of new line
 set smartindent
+
 
 set laststatus=2 " show the satus line all the time
 
