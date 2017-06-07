@@ -36,14 +36,28 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jshint.vim'
 Plugin 'ctrlp.vim'
-"Plugin 'nerdtree'
-"Plugin 'nerdtree-ack'  
-"Plugin 'FindInNERDTree' 
+
+"Plugin 'nerdtree' " deprecated to scrooloose/nerdtree
+
+"Plugin 'nerdtree-ack' "better use ctrl+p
+
+Plugin 'tmux-plugins/vim-tmux' "proper syntax highlighting tmux.conf
+"K jumps to exact place in man tmux, :make invokes tmux source .tmux.conf and
+"place all errorrs if any in quicklist
+"g! executest lines as tmux commands. Works on vusal selection or as a motion.
+"g!! executest just the current line
+
+"Plugin 'vim-ansible-yaml'
+"let g:ansible_options = {'ignore_blank_lines': 0}
+
+" A Vim plugin which shows a git diff in the gutter (sign column) and
+" stages/undoes hunks.
 Plugin 'airblade/vim-gitgutter'
 
-" nerdtree-fugitive need to working on this
+"nerdtree-fugitive need to working on this
 Plugin 'scrooloose/nerdtree' 
 
+"show whats is changed in nerdtree
 Plugin 'low-ghost/nerdtree-fugitive'
 
 "path to nerdtree below adding icons 
@@ -56,28 +70,15 @@ Plugin 'nginx.vim'
 
 Plugin 'pearofducks/ansible-vim'
 
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-" Plugin 'user/L9', {'name': 'newL9'}
 
 "Add plugin for shortkeys good for fugitive
 Plugin 'unimpaired.vim'
 
 Plugin 'Tagbar'
 
+" vimdiff looks ugly, solarized add some cool look
+Plugin 'solarized'
 
 "Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more.
 "The plugin provides mappings to easily delete, change and add such surroundings in pairs.
@@ -115,6 +116,21 @@ Plugin 'surround.vim'
 
 Plugin 'commentary.vim'
 
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+" Plugin 'user/L9', {'name': 'newL9'}
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -129,22 +145,14 @@ let base16colorspace=256  " Access colors present in 256 colorspace"
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
-
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
+"To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-"
+
+" Set high visibility for diff mode
+let g:solarized_diffmode="high"
 syntax enable
+"let g:solarized_termcolors=256 "with this option only fonts have background
 set background=dark
 colorscheme solarized
 
@@ -152,7 +160,6 @@ colorscheme solarized
 set nocompatible 
 
 " enable find files also in subfolders 
-
 set path+=**
 
 " Display all matching files when we tab complete 
@@ -162,6 +169,19 @@ set wildmenu
 
 " enable netrw - stable vim neerdtree old feature, trying to check old embeded
 " feature 
+
+
+
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+filetype off                 " required
+filetype plugin indent on    " required
 filetype plugin on
 
 " recomended from Syntatic
@@ -367,9 +387,9 @@ nnoremap td  :tabclose<CR>
 ":inoremap <C-S-t> <Esc>:tabnew<CR>
 :inoremap <C-S-w> <Esc>:tabclose<CR>
 
-autocmd VimEnter * tab all
-"autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"' #error line
-"( open two tabs at one tabcreate
+"autocmd VimEnter * tab all " turn off this feature ( when i use vimdiff vim
+"open in two separate tabs [ quick fix vimdiff -o vertical1 vertical2 ]
+"
 
 "normal without this mapping gT gt is working quite good
 "no plugin needed orginal vim is working ( mv .vimrc to .vimrc-vanila )
