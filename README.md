@@ -79,6 +79,10 @@ ls -latr
 
 ![SolarizedGif](https://c1.staticflickr.com/5/4184/33417739833_036ba3e44e_o.gif)
 
+vimdiff solarized
+![Solarizedvimdiff](https://farm5.staticflickr.com/4280/34315093664_a0c2c4b373_h_d.jpg)
+
+
 ## Install my .vim profile 
 git clone https://github.com/JarRoDk/.vim ~/.vim
 
