@@ -309,6 +309,7 @@ set encoding=utf8
 set autoindent " automatically set indent of new line
 set smartindent
 
+
 set laststatus=2 " show the satus line all the time
 
 
