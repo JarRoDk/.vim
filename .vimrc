@@ -146,6 +146,7 @@ filetype plugin indent on    " required
 "
 syntax enable
 set background=dark
+colorscheme solarized
 
 " don't pretend old good vi
 set nocompatible 
