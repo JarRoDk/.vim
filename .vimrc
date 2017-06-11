@@ -47,6 +47,9 @@ Plugin 'tmux-plugins/vim-tmux' "proper syntax highlighting tmux.conf
 "g! executest lines as tmux commands. Works on vusal selection or as a motion.
 "g!! executest just the current line
 
+"Plugin to move between panels in vim and tmux panels by ctrl + hjkl
+Plugin 'christoomey/vim-tmux-navigator'
+
 "Plugin 'vim-ansible-yaml'
 "let g:ansible_options = {'ignore_blank_lines': 0}
 
