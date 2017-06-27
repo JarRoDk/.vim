@@ -513,3 +513,18 @@ let g:NERDTreeIndicatorMapCustom = {
 set textwidth=80
 set colorcolumn=+1
 
+"how to force to use bffertag in ctrlp
+let g:ctrlp_extensions = ['buffertag']
+
+
+let g:ctrlp_buftag_types = {
+  \ 'yml'     : '--languages=ansible --ansible-types=k',
+  \ }
+let g:tagbar_type_ansible = {
+\ 'ctagstype' : 'ansible',
+\ 'kinds' : [
+\ 't:tasks'
+\ ],
+\ 'sort' : 0
+\ }
+let g:ctrlp_working_path_mode = 0
