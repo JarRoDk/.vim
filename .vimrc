@@ -155,7 +155,7 @@ set nocompatible              " be iMproved, required
 " Set high visibility for diff mode
 let g:solarized_diffmode="high"
 syntax enable
-"let g:solarized_termcolors=256 "with this option only fonts have background
+let g:solarized_termcolors=256 "with this option only fonts have background
 set background=dark
 colorscheme solarized
 
