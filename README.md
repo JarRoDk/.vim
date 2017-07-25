@@ -40,6 +40,9 @@ download, click and install
 ## Configure Fonts in windows putty like from screenshot
 ![Settings Window putty](https://farm1.staticflickr.com/633/30962917843_c8ca94517e_o_d.png)
 
+## Remember to set translation to UTF-8
+![Settings utf-8 putty](https://farm5.staticflickr.com/4302/35309150454_7dca7da38e_o_d.png)
+
 # Change to 256color
 in .bashrc
 export TERM=”screen-256color” 
