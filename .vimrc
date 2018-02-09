@@ -16,6 +16,12 @@ set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
 " Powerline for Centos | pip install --user powerline-status
 set  rtp+=/usr/lib/python2.6/site-packages/powerline/bindings/vim/
+
+"don't forget to install fzf 
+"git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+"~/.fzf/install
+set rtp+=~/.fzf
+
 set laststatus=2
 let base16colorspace=256  " Access colors present in 256 colorspace"
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
@@ -68,7 +74,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nginx.vim'
 
-Plugin 'pearofducks/ansible-vim'
+"Plugin 'pearofducks/ansible-vim'
 
 Plugin 'tpope/vim-fugitive'
 
@@ -83,8 +89,8 @@ Plugin 'solarized'
 "Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more.
 "The plugin provides mappings to easily delete, change and add such surroundings in pairs.
 "HELP:
-"We can change 'asdasd' to "asdasd" by - cs'" ( change surrounding by ' to " ), delete s ' 
-"world jarek in line below, can be in brackets by - ysiw] 
+"We can change 'asdasd' to "asdasd" by - cs'" ( change surrounding by ' to " ), delete s '
+"world jarek in line below, can be in brackets by - ysiw]
 "test jarek
 "test [jarek]
 "cs[{
@@ -206,10 +212,9 @@ let g:syntastic_warning_symbol = "⚠"
 
 map <F2> :NERDTreeToggle<CR>
 
-" Add syntatic lang 
-au BufNewFile,BufRead *.yaml set filetype=yaml.ansible
-au BufNewFile,BufRead *.yml set filetype=yaml.ansible
-
+" Add syntatic lang
+"au BufNewFile,BufRead *.yaml set filetype=yaml.ansible
+"au BufNewFile,BufRead *.yml set filetype=yaml.ansible
 
 " when we will enter in insert mode number will show
 function NumberToggle()
